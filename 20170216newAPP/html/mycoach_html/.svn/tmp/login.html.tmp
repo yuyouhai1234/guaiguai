@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="../../css/mycoach_css/login-1.css">
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+</head>
+<body class="login-box">
+	<div class="login-header">
+		<img src="../../images/loglogo.png">
+	</div>
+	<div class="login-cont-box">
+		<p class="error-box"></p>
+		<div class="user-tel-box">
+			<img src="../../images/usernameicon.png" class="login-user-pic">
+			<input type="text" placeholder="请输入您的手机号" id="login-user-tel"/>
+		</div>
+		<p class="error-box"></p>
+		<div class="user-pwd-box">
+			<img src="../../images/passwordicon.png" class="login-pwd-pic">
+			<input type="password" placeholder="请输入您的密码" id="login-user-pwd"/>
+		</div>
+		<p class="error-box"></p>
+		<div class="login-btn-box">
+			<input type="button" value="登录" id="login-btn"/>
+		</div>
+		<div class="login-other-box">
+			
+			<a href="reset_pwd.html" class="forget-pwd">忘记密码?</a>
+		</div>
+		
+	</div>
+</body>
+<script type="text/javascript" src="../../commonjs/md5.js"></script>
+<script type="text/javascript" src="../../commonjs/jquery.js"></script>
+<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+<script type="text/javascript" src="../../commonjs/touch.js"></script>
+<script type="text/javascript" src="../../js/mycoach_js/login-1.js"></script>
+</html>

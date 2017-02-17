@@ -1,0 +1,114 @@
+html,body{
+	max-width:640px;
+	height:100%;
+	overflow: hidden;
+}
+.video-box{
+    position:relative;
+    background:#f1f6f9;
+    overflow: hidden;
+    display:-webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	-webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -moz-box-orient:vertical;
+    -moz-box-direction:normal;
+    flex-direction:column;
+    -webkit-flex-direction:column;
+}
+.video-list-cont{
+	box-flex:1;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	flex:1;
+	-webkit-flex:1;
+	position:relative;
+    overflow: hidden;
+}
+.main-cont{
+	height:auto;
+	box-sizing: border-box;
+	overflow: hidden;
+	padding:5px;
+}
+
+.menu-list{
+	width:16rem;
+	height:2rem;
+	background:#F1A653;
+}
+.list-cont{
+	width:4rem;
+	height:2rem;
+	float:left;
+	line-height:2rem;
+	text-align: center;
+	font-size:1rem;
+	box-sizing: border-box;
+	border-right:1px solid #fff;
+}
+.list-cont:nth-child(4){
+	border:0;
+}
+/*以下是播放*/
+.video-play-box{
+	width:16rem;
+	height:8rem;
+	background:#fff;
+}
+.teach-video-list{
+	width:16rem;
+	height:5rem;
+	border-top:1px solid #ccc;
+	box-sizing: border-box;
+	z-index:-1;
+}
+.video-list-pic{
+	width:5rem;
+	height:5rem;
+	float:left;
+	position:relative;
+	box-sizing: border-box;
+	padding-top:0.5rem;	
+}
+.video-list-pic img{
+	width:4rem;
+	height:3.5rem;
+}
+.video-num{
+	position:absolute;
+	width:1rem;
+	height:1rem;
+	background:#F1A653;
+	color:#fff;
+	line-height:1rem;
+	text-align: center;
+	top:0.5rem;
+	left:0;
+	font-size:0.5rem;
+}
+.v-tit{
+	width:11rem;
+	height:5rem;
+	float:left;
+	box-sizing: border-box;
+	line-height:1rem;
+	font-size:0.8rem;
+	font-weight:bold;
+	padding-top:0.5rem;	
+}
+.teach-video-list:first-child{
+	border-top:0;
+}
+.hidden{
+	display:none;
+}
+/*以下是不同类型样式不同*/
+.list-diff-style{
+	background:#F1A653;
+	color:#fff;
+}
+

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>科目四章节练习</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+	<script type="text/javascript" src="../../commonjs/touch.js"></script>
+<<<<<<< .mine
+	<script type="text/javascript" src="../../js/exam_js/km4-module-1.js"></script>
+	<link rel="stylesheet" href="../../css/exam_css/km1-module-1.css">
+=======
+	<script type="text/javascript" src="../../js/exam_js/km4-module.js"></script>
+	<link rel="stylesheet" href="../../css/exam_css/km1-module-1.css">
+>>>>>>> .r132
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+</head>
+<body class="km1-module-outer">
+	<div class="exam-content"></div>
+	<div class="exam-footer">
+		<input type="button" name="" value="上一题" id="prev-btn" class="for-subject">
+		<input type="button" name="" value="下一题" id="next-btn" class="for-subject">
+	</div>
+
+</body>
+</html>

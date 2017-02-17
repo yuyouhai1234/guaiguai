@@ -1,0 +1,68 @@
+$(document).ready(function(){
+	function bodyScale(){
+		var devicewidth=document.documentElement.clientWidth;
+		var scale=devicewidth/640;
+		document.body.style.zoom=scale;
+	}
+	window.onload=window.onresize=function(){
+		bodyScale();
+		$('html,body').show();
+	}
+	var videoId=sessionStorage.getItem('videoId');
+	$.ajax({
+		type:'post',
+		url:'https://guaiguaixueche.com.cn/api/video/play',
+		data:{video_id:videoId},
+		dataType:'json',
+		success:function(data){
+			//console.log(data);
+			if(data.code=='success'){
+				var cont=data.video;
+				var ad=data.AD;
+				play(ad,cont)
+			}else{
+				alert(data.content)
+			}
+		}
+	})
+	function play(ad,data){
+		//console.log(ad);
+		var numberBox=$('<p class="down-num">播放次数：<span class="down-num-onfo">'+data.down_count+'</span>次</p>');
+		$('.video-down-box').append(numberBox);
+		var oPic=$('<dt class="info-pic"><img src="http://cdn.guaiguaixueche.com/'+data.cover_pic_path+'"></dt>')
+		$('.video-info').append(oPic);
+		var oTit=$('<p class="info-tit">'+data.v_title+'</p>');
+		var odes=$('<p class="info-description">视频简介：'+data.v_description+'</p>');
+		var oDd=$('<dd class="info-main"></dd>');
+		oDd.append(oTit);
+		oDd.append(odes);
+		$('.video-info').append(oDd);
+		var a='http://cdn.guaiguaixueche.com/'+data.converted_path;
+		var i='http://cdn.guaiguaixueche.com/'+data.cover_pic_path;
+		if(ad==''){
+			var l='';
+			var t='';
+		}else{
+			var l='http://cdn.guaiguaixueche.com/'+ad.video_path;
+			var t=ad.video_duration;
+		}
+		getCont(a,i,l,t);
+		//console.log(a,i,l,t)
+	}
+})
+function getCont(a,i,l,t){
+	var flashvars={
+		f:'../../ckplayer/m3u8.swf',
+		a:a,  
+		s:4,
+		c:0,
+		l:l,  
+		t:t,   
+		p:'1',
+		e:'1',
+		i:i,
+		};
+	var params={bgcolor:'#FFF',allowFullScreen:false,allowScriptAccess:'always',wmode:'transparent'};
+	var video=[a]; 
+	CKobject.embed('../../ckplayer/ckplayer.swf','a1','ckplayer_a1','100%','300',false,flashvars,video,params);
+}

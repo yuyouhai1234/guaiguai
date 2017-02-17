@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>我的分享码</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no"/>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="../../css/personcenter_css/share-6.css?v=20161129">
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+</head>
+<body>
+	<div class="coach-list-cont">
+		<div class="coach-list-box" id="list-box">
+			<div class="share-bottom" id="qrcode"></div>
+			<div class="share-bottom" id="imagQrDiv"></div>
+			<div class="warn-box" style="text-align: center;line-height:50px;font-size:22px;color:#000;font-weight:bold">(长按可识别二维码,还可以分享给您的小伙伴哦!)</div>
+			<!--<div class="how-use"><img src="../../images/how-use.png"></div>-->
+		</div>
+	</div>
+	<!--<div class="share-bg"></div>
+	<div class="how-use-box" id="use-box">
+		<div class="use-info">
+			<ul>
+				<li>(1)分享码是所有注册成为“乖乖学车”平台会员后自动生成，用于推荐平台并获得奖励的唯一途径。</li>
+				<li>(2)注册奖励：通过网页或微信公众号注册成为“乖乖学车”会员的，都会得到现金注册奖励，可以在微信公众号个人中心的钱包查看。</li>
+				<li>(3)推荐奖励：向他人推荐“乖乖学车”后，此人注册后找到驾校报名成功并完成缴费确认，推荐人能得到现金推荐奖励，可以在微信公众号个人中心的钱包查看。</li>
+				<li>(4)举例：A通过网站注册成为“乖乖学车”会员，他得到注册奖励，B通过扫描A的分享码成为“乖乖学车”会员，找到合适的驾校报名并缴费确认，A得到推荐奖励。若C扫描B的分享码报名成功，则B得到推荐奖励A不会得到
+奖励。即推荐奖励只单层传递，隔层不会有奖励。</li>
+			</ul>
+		</div>
+	</div>-->
+</body>
+<script type="text/javascript" src="../../commonjs/jquery.js"></script>
+<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+<script type="text/javascript" src="../../commonjs/touch.js"></script>
+<script type="text/javascript" src="../../commonjs/iscroll.js"></script>
+<script type="text/javascript" src="../../commonjs/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="../../commonjs/main.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../../js/personcenter_js/share-10.js?v=20161129"></script>
+</html>

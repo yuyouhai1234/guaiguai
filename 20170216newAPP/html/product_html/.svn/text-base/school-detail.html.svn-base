@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="../../css/product_css/school-detail-3.css?v=20161129">
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+	<link rel="stylesheet" href="../../commoncss/main.css">
+	<script type="text/javascript" src="../../commonjs/jquery.js"></script>
+	<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+	<script type="text/javascript" src="../../commonjs/touch.js"></script>
+	<script type="text/javascript" src="../../commonjs/iscroll.js"></script>
+	<script type="text/javascript" src="../../commonjs/mobilyblocks.js"></script>
+	<script type="text/javascript" src="../../commonjs/common.js"></script>
+	<script type="text/javascript" src="../../commonjs/main.js"></script>
+	<script type="text/javascript" src="../../js/product_js/school-detail-8.js?v=20161129"></script>
+</head>
+<body>
+	<div class="school-detail-outer">
+		<dl class="school-info">
+			<dt class="school-pic"></dt>
+			<dd class="school-cont">
+				<div class="school-name name-box">
+					<span class="tit-diff">驾校名称：</span>
+				</div>
+				<div class="school-name eva-box">
+					<span class="tit-diff">星级评价：</span>
+				</div>
+				<div class="school-name tel-box">
+					<span class="tit-diff">联系方式：</span>
+				</div>
+				<div class="school-name add-box">
+					<span class="tit-diff">驾校地址：</span>
+				</div>
+			</dd>
+		</dl>
+	</div>
+	<div class="school-about-outer" id="wrapper">
+		<div class="school-iscroll"></div>	
+	</div>
+	<div class="school-about-list" id="leftTabBox">
+		<ul class="about-list">
+			<li class="list-tit  school-menu-diff">驾校简介</li>
+			<li class="list-tit">产品详情</li>
+			<li class="list-tit">教练团队</li>
+			<li class="list-tit">驾校评价</li>
+		</ul>
+	</div>
+	<div class="hidden" id="jianjie">
+       <!--<div class="jianjie-cont"><dataschool_intro></div>-->
+   </div>  
+    <div class="hidden" id="productlist">
+    	<!--<dl class="detail-list">
+			<dt class="detail-pic">
+				<img src="http://cdn.guaiguaixueche.com/<dataproduct_pic>">
+			</dt>
+			<dd class="detail-cont">
+				<p>产品名称：<span><dataproduct_name></span></p>
+				<p>剩余人数：<span class="personPlus"><dataamount></span>人</p>
+				<p>驾校报价：<span class="school-price">￥<datasum_price></span></p>
+				<p>支付定金：<span class="cut-price">￥<datacoupon></span><br><span class="cut-info">(线上支付线下可享受<b><datacoupon_price></b>元优惠)</span></p>
+				<p>应付金额：<span class="school-pri">￥<datapay_price></span></p>
+				<p class="service-txt">服务标准：<span><dataservice_standard></span></p>
+				<input type="button" value="我要报名" class="appoint-btn">
+			</dd>
+		</dl>-->
+    </div>
+    
+    <div class="hidden" id="coachList">
+    	<!--<dl class="coach-info">
+			<dt class="coach-pic">
+				<img src="<datacoach_icon>">
+			</dt>
+			<dd class="coach-cont">
+				<p>姓名：<span><datacoach_name></span></p>
+				<p>电话：<span><datatelephone></span></p>
+				<div class="coach-edg skill-containter" skill="<datatrain_skills>">培训技能：
+					<span class="skill-box">
+						<span class="add-star"></span>
+	            		<span class="del-star"></span>
+            		</span>
+            	</div>
+				<div class="coach-edg attitude-cont" skill="<dataservice_attitude>">服务态度：
+					<span class="attitude-box">
+						<span class="add-star"></span>
+	            		<span class="del-star"></span>
+            		</span>
+				</div>
+				<div class="coach-edg health-cont" skill="<datacar_health>">车辆卫生：
+					<span class="health-box">
+						<span class="add-star"></span>
+	            		<span class="del-star"></span>
+            		</span>
+				</div>
+			</dd>
+		</dl>-->
+    </div>
+    <div class="hidden" id="evaluate-box">
+    	<!--
+    	<div class="school-eva-box">
+    		<div class="eva-per">
+    			<span class="eva-person"><datatelephone></span>
+    			<span class="per-product">(<dataproduct_name>)</span>
+    			<span class="eva-time"><dataadd_datetime></span>
+    		</div>
+    		<div class="eva-cont">
+    			<p><datacomment></p>
+    		</div>
+    	</div>
+    	-->
+    </div>
+    <!--以下是菜单
+	<div id="nature">
+	    <div class="nature">
+		    <h1>导航</h1>
+		    <ul class="reset">
+		      <li><a href="../../index.html">首页</a></li>
+		      <li><a href="../personcenter_html/personcenter.html">个人<br>中心</a></li>
+		      <li><a href="../exam_html/simulate.html">理论<br>模拟</a></li>
+		      <li><a href="../video_html/index.html">乖乖<br>视频</a></li>
+		      <li><a href="product_list.html">驾考<br>报名</a></li>
+		      <li><a href="../bespeak_html/coach.html">培训<br>预约</a></li>
+		      <li><a href="../product_html/map.html">周边<br>驾校</a></li>
+		    </ul>
+	  	</div>
+  	</div>-->
+</body>
+</html>

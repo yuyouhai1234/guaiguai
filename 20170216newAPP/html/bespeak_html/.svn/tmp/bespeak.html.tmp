@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>预约</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="../../css/bespeak_css/bespeak-1.css">
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+</head>
+<body>
+			<div class="header">		
+				<div class="yuyue-header">
+					<h2 class="yuyue-tit">预约信息</h2>
+					<div class="be-school header-common">
+						<img src="../../images/coachicon.png">						
+					</div>
+					<div class="be-tel header-common">
+						<img src="../../images/cebianlandianhua.png">											
+					</div>					
+				</div>
+				<div class="be-times">
+					<h2 class="yuyue-tit">培训预约</h2>
+					<div class="car-class">
+						<div class="be-car">
+							<img src="../../images/leixing20_19.png">
+							<p>车辆：</p>
+							<input type="hidden" id="saveCar_id" value="" />							
+							<input type="text"  value="" class="carDetal" readonly="readonly"/>
+							<b class="car-Msg" >没有车辆信息!</b>
+							<ul class="carDetal-list">
+								
+							</ul>
+						</div>
+						<div class="be-class">
+							<img src="../../images/kemuqiehuan.png" class="changeClass">
+							<p><span class="classTwo">科目二</span><span class="classThr">科目三</span></p>
+							<input type="hidden" id="saveclass_id" value="" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="beDetail" id="wrapper">
+				<div class="iscoll"><b  class="class-Msg">没有排班信息！</b></div>
+			</div>
+			<div class="be-bottom">
+				<div class="dateBefore date">前一天</div>
+				<div class="dateMou date">
+					<p>日期</p>
+					<form class="form">						 
+					  <select  class="select" onchange="dateChange(this.options[this.selectedIndex].text)">					    
+					  </select>
+					  <input type="hidden" id="date_mou" value="" />
+					</form>
+				</div>	
+				<div class="dateLater date">后一天</div>	
+			</div>			
+</body>
+<script type="text/javascript" src="../../commonjs/jquery.js"></script>
+<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+<script type="text/javascript" src="../../commonjs/touch.js"></script>
+<script type="text/javascript" src="../../commonjs/iscroll.js"></script>
+<script type="text/javascript" src="../../js/bespeak_js/bespeak-1.js"></script>
+</html>

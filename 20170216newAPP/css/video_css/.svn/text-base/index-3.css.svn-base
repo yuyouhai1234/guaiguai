@@ -1,0 +1,94 @@
+html,body{
+	width:100%;
+	height:100%;
+}
+.video-box{
+    position:relative;
+}
+.video-list-cont{
+	width:100%;
+	height:100%;
+    position:relative;
+    overflow: hidden;
+}
+.main-cont{
+	height:auto;
+	box-sizing: border-box;
+	overflow: hidden;
+	padding:5px;
+}
+.video-menu{
+	width:100%;
+	height:80px;
+	background:#F9C46C;
+	border-radius: 10px 10px 0 0;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+.menu-list{
+	overflow: hidden;
+}
+.list-cont{
+	float:left;
+	line-height:80px;
+	width:32%;
+	text-align: center;
+	font-size:26px;
+	color:#fff;
+}
+
+.teach-video-list{
+	width:100%;
+	height:350px;
+	border-bottom:1px solid #ccc;
+	box-sizing: border-box;
+	margin-bottom:10px;
+}
+.video-list-pic{
+	width:95%;
+	margin:0 auto;
+	height:250px;
+	position:relative;	
+}
+.video-list-pic img{
+	width:100%;
+	height:250px;
+}
+.pic-tit{
+	position:absolute;
+	width:100%;
+	height:70px;
+	background:rgba(104,100,100,.8);
+	top:0;
+	left:0;
+	color:#fff;
+	line-height:70px;
+	font-size:24px;
+	text-align: center;
+	white-space:nowrap;
+	overflow:hidden ;
+	text-overflow: ellipsis;
+}
+.v-tit{
+	width:90%;
+	height:100px;
+	margin:0 auto;
+	box-sizing: border-box;
+	line-height:50px;
+	font-size:24px;
+	font-weight:bold;	
+}
+.v-down{
+	float:right;
+}
+.teach-video-list:last-child{
+	border-bottom:0;
+}
+.hidden{
+	display:none;
+}
+/*以下是不同类型样式不同*/
+.list-diff-style{
+	background:#D36F6F;
+}

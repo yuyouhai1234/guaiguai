@@ -1,0 +1,70 @@
+$(document).ready(function(){
+	var myScroll=new IScroll('#wrapper',{
+        vScroll:false,
+        hScrollbar:false,
+        snap:false
+	})
+	var video={
+		createHTML:function(selecter,data){
+				var temp=selecter.html().replace(eval("/<!--/gi"),'').replace(eval("/-->/gi"),'');
+				for(var c in data){
+					temp=temp.replace(eval("/<data"+c+">/gi"),data[c]);
+					}
+				return temp;
+		},
+		shuaxin:function(){
+				setTimeout(function(){myScroll.refresh()},500)
+		},
+		getData:function(id){
+			$.ajax({
+				type: "post",
+				url:"https://guaiguaixueche.com.cn/api/list/video",
+				data:{video_type:id},
+				dataType:'json',
+				success: function(data){
+					if(data.code!="success"){
+							return false;
+					}
+					video.data=data.content;
+					video.start(video.data,id)
+				}
+			})
+		},
+		start:function(data,id){
+			var data=eval(video.data);
+			for(var i=0;i<data.length;i++){
+				$('.main-cont').append(video.createHTML($('.hidden').eq(id-1),data[i]))
+			}
+				video.shuaxin();
+				diffVideo($('.video-list-pic img'));
+		}
+		
+	}
+	video.getData(1);
+	$('.list-cont').eq(0).addClass('list-diff-style');
+	$('.list-cont').on('tap',function(){
+		var index=$('.list-cont').index($(this));
+		$('.list-cont').removeClass('list-diff-style').eq(index).addClass('list-diff-style');
+		$('.main-cont').html('');
+		var id=$(this).attr('dataid');
+		video.getData(id);
+		
+	})
+	function bodyScale(){
+		var devicewidth=document.documentElement.clientWidth;
+		var scale=devicewidth/640;
+		document.body.style.zoom=scale;
+	}
+	window.onload=window.onresize=function(){
+		bodyScale();
+		$('html,body').show();
+	}
+	function diffVideo(obj){
+		obj.on('tap',function(){
+			var index=$('.video-list-pic img').index($(this));
+			var videoId=$('.teach-video-list').eq(index).attr('video_id');
+			sessionStorage.setItem('videoId',videoId);
+			window.open('video.html','_self');
+		})
+	}
+})

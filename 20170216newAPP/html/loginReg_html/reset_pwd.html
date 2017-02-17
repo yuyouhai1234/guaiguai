@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>重置密码</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="../../css/loginReg_css/login-4.css?v=20161209">
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+	<!--<script type="text/javascript" src="../js/jweixin-1.0.0.js"></script>-->
+	<script type="text/javascript" src="../../commonjs/jquery.js"></script>
+	<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+	<script type="text/javascript" src="../../commonjs/touch.js"></script>
+	<!--<script type="text/javascript" src="../../commonjs/getcode.js"></script>-->
+	<script type="text/javascript" src="../../commonjs/main.js"></script>
+	<script type="text/javascript" src="../../js/loginReg_js/2resetpwd-9.js?v=20170206"></script>
+	<script type="text/javascript" src="../../commonjs/avoid_share.js"></script>
+</head>
+<body class="login-box">
+<div class="login-header" style="margin-top:220px;">
+	<img src="../../images/shareguaiguaitop.png">
+</div>
+<div class="login-name" style="margin-bottom:20px;">重置密码</div>
+<div class="login-cont-box">
+	<!--<p class="error-box"></p>-->
+	<div class="reg-tel-box" style="border: none;">
+		<!--<img src="../../images/usernameicon.png" class="login-user-pic">-->
+		<input style="" type="text" placeholder="请输入需重置密码的手机号" id="reg-user-tel"/>
+	</div>
+	<!--<p class="error-box"></p>
+	<div class="reg-tel-box">
+		<img src="../../images/usernameicon.png" class="login-user-pic">
+		<input type="text" placeholder="请再次输入您的手机号" class="suer-user-tel"/>
+	</div>-->
+	<p class="error-box"></p>
+	<div class="reg-btn-box" style="margin:10px auto 20px auto;">
+		<input type="button" value="确认重置密码" id="reg-btn"/>
+	</div>
+	<p class="error-box" style="color:#999999;margin:10px auto;width: 80%;line-height:26px;font-size:12px;display:block;height:auto;">
+		确认重置密码，我们将会以短信的形式将新密码发送至您的手机账号。请确认手机号输入无误，重置密码后您可登录账号在个人中心重新修改密码
+	</p>
+</div>
+
+<style>
+	.bigtextbox{display:none;position:fixed;width: 80%;top:25%;left: 10%;height: 90px;border: 1px solid #999999;background: white;}
+	.showbtb{float:left;max-width:60%;overflow:hidden;width: 60%;height: 90px;line-height: 90px;font-size: 40px;font-weight: 600;}
+	/*.showbtn{margin:0 auto;width: 300px;height: 30px;}*/
+	#leftbtn,#rightbtn{margin:20px 0;border-radius:6px;border:none;width: 80px;height: 50px;line-height: 30px;font-size: 22px;color: white;text-align: center;}
+	#leftbtn{float:left;background: #1aac19;}
+	#rightbtn{float:right;background: #e64240;}
+</style>
+<div class="bigtextbox">
+	<p class="showbtb"></p>
+	<input id="leftbtn" type="button" value="确认" />
+	<input id="rightbtn" type="button" value="取消" />
+</div>
+</body>
+</html>

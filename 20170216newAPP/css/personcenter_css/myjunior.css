@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+body,html{
+	width:16rem;
+	height:100%;
+}
+body{
+	width:16rem;
+	height:100%;
+	position：relative;
+	overflow:hidden;
+}
+.junhead{
+	width:16rem;
+	height:2rem;
+	background:#f6ae2c;
+	color:#fff;
+	font-size:1rem;
+	text-align:center;
+	line-height:2rem;
+}
+.jun-list{
+	width:16rem;
+	height:90%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    overflow: hidden;
+}
+.junlistbox{
+	height:auto;
+	width:16rem;
+}
+.junlist{
+	width:16rem;
+	height:5rem;
+	box-sizing:border-box;
+	padding-left:0.5rem;
+	border-bottom:1px dotted #FC3;
+}
+.no-jun{
+	width:16rem;
+	height:5rem;
+	text-align:center;
+	margin-top:4rem;
+	display:none;
+	font-size:1rem;	
+}
+.junlist div{
+	line-height:3rem;
+	font-size:1rem;
+}

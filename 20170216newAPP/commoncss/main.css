@@ -1,0 +1,55 @@
+/*以下是菜单*/
+.nature {
+display:block;
+width:90px;
+height:90px;
+text-align:center;
+line-height:90px;
+color:#FFf;
+text-shadow:1px 1px 1px rgba(0,0,0,.3);
+cursor:pointer;
+position:relative;
+-moz-border-radius:50%;
+-ms-border-radius:50%;
+-webkit-border-radius:50%;
+border-radius:50%;
+margin:0 auto;
+background: linear-gradient(#F1A653, #F00); /* 标准的语法 */
+box-shadow:2px 3px 8px #999;
+-webkit-tap-highlight-color:transparent; 
+}
+#nature{
+	position:absolute;
+	right:0px;
+	bottom:110px;
+	margin:0 auto;
+	width:300px;
+}
+ul.reset,
+ul.reset li {
+display:block;
+list-style:none;
+padding:0;
+margin:0;
+}
+
+ul.reset li {
+position:absolute;
+border-radius:50%;
+width:90px;
+height:90px;
+text-align:center;
+line-height:30px;
+background: linear-gradient(#Fff, #F1A653); /* 标准的语法 */
+box-shadow:1px 1px 8px #999;
+font-size:24px;
+box-sizing: border-box;
+padding:10px;
+}
+
+ul.reset li a {
+outline:none;text-shadow:none;
+}
+a {
+color:#f00; text-decoration:none;
+}

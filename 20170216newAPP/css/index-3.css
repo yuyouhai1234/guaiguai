@@ -1,0 +1,102 @@
+html,body{
+	width:16rem;
+	height:100%;
+}
+#sw{
+	width:16rem;
+	height:8rem;
+}
+.s1,.s2,.s3,.s4{
+	width:16rem;
+	height:8rem;
+	font-family: 'Microsoft Yahei',Tahoma,Helvetica,Arial,sans-serif;
+}
+.s1{
+	background:url(../images/banner1.png) no-repeat 0 0;
+	background-size:100% 100%;
+	position:relative;
+}
+.s2{
+	background:url(../images/banner2.png) no-repeat 0 0;
+	background-size:100% 100%;
+	position:relative;
+}
+.s3{
+	background:url(../images/banner3.png) no-repeat 0 0;
+	background-size:100% 100%;
+	position:relative;
+}
+.s4{
+	background:url(../images/banner4.png) no-repeat 0 0;
+	background-size:100% 100%;
+	position:relative;
+}
+/*以下是主要内容*/
+.home-main{
+	width:16rem;
+	height:auto;
+	box-sizing: border-box;	
+}
+.main-left{
+	width:8rem;
+	height:auto;
+	float:left;
+}
+.main-right{
+	width:8rem;
+	height:auto;
+	float:left;
+}
+.home-menu{
+	width:7rem;
+	height:5rem;
+	background:#fff;
+	text-align: center;
+	border-radius:0 10px 10px 10px;
+	box-sizing: border-box;
+	padding:0.5rem 0;
+	box-shadow: 0px 0px 1px 1px #ccc;
+	margin:0.3rem auto;
+}
+.home-menu dt{
+	height:3.5rem;
+	width:7rem;
+	box-sizing: border-box;
+}
+.home-menu dt img{
+	width:3.5rem;
+	height:3.5rem;
+}
+.home-menu dd{
+	width:7rem;
+	height:1rem;
+	line-height:1rem;
+	font-size:1rem;
+	text-align: center;
+}
+.home-menu-diff{
+	width:7rem;
+	height:5rem;
+	background:#fff;
+	text-align: center;
+	border-radius:10px 0  10px 10px;
+	box-sizing: border-box;
+	padding:0.5rem 0;
+	box-shadow: 0px 0px 1px 1px #ccc;
+	margin:0.3rem auto;
+}
+.home-menu-diff dt{
+	height:3.5rem;
+	width:7rem;
+	box-sizing: border-box;
+}
+.home-menu-diff dt img{
+	width:3.5rem;
+}
+.home-menu-diff dd{
+	width:7rem;
+	height:1rem;
+	line-height:1rem;
+	font-size:1rem;
+	text-align: center;
+}

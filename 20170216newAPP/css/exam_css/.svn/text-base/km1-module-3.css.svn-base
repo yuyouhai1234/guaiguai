@@ -1,0 +1,134 @@
+html,body{
+	width:100%;
+	height:100%;
+}
+.km1-module-outer{
+	display:-webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	-webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -moz-box-orient:vertical;
+    -moz-box-direction:normal;
+    flex-direction:column;
+    -webkit-flex-direction:column;
+    position:relative;
+    overflow:hidden;
+}
+.exam-content{
+	box-flex:1;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	flex:1;
+	-webkit-flex:1;
+	width:100%;
+	overflow-y:auto; 
+}
+.question-tit{
+	line-height:40px;
+	margin:0 auto;
+	width:90%;
+	margin-top:20px;
+	font-size:24px;
+}
+.judge-type{
+	display:inline-block;
+	width:60px;
+	height:30px;
+	line-height:30px;
+	font-size:12px;
+	text-align: center;
+	border:1px solid #000;
+	border-radius: 10px;
+	color:#f00;
+	margin-right:10px;
+}
+/* 以下是放图片的盒子 */
+.question-img-box{
+	width:90%;
+	margin:0 auto;
+	margin-top:20px;
+	display:none;
+}
+.exam-pic{
+	width:90%;
+	height:300px;
+}
+/* 以下是选项 */
+.question-option{
+	width:90%;
+	margin:0 auto;
+	margin-top:30px;
+}
+.question-option li{
+	line-height:40px;
+	font-size:28px;
+}
+.option-btn{
+	display:inline-block;
+	width:30px;
+	height:30px;
+	border:1px solid #ccc;
+	border-radius: 50%;
+	margin-right:10px;
+	margin-top:20px;
+}
+.active{
+	background:red;
+}
+/* 以下是底部 */
+.exam-footer{
+	width:100%;
+	height:80px;
+	background:#3B3838;
+	line-height:80px;
+	color:#fff;
+	font-size:16px;
+	text-align: center;
+}
+.for-subject{
+	width:20%;
+	height:40px;
+	margin:0 20px;
+	border-radius: 20px;
+}
+.exam-result{
+	width:90%;
+	margin:0 auto;
+	margin-top:60px;
+}
+.result{
+	color:red;
+	font-weight:bold;
+	font-size:24px;
+	line-height:50px;
+}
+.result-cont{
+	line-height:40px;
+	text-indent: 2em;
+	font-weight: bold;
+	font-size:24px;
+}
+.true-res{
+	line-height:50px;
+	font-size:24px;
+	color:red;
+}
+.true-result{
+	background:green;
+}
+/* 多选情况下的提交按钮 */
+#submit-btn{
+	width:20%;
+	margin-left:40%;
+	margin-top:20px;
+	height:40px;
+	line-height:40px;
+	border:0;
+	border-radius: 20px;
+	background:#E29851;
+	color:#fff;
+	letter-spacing: 3px;
+}

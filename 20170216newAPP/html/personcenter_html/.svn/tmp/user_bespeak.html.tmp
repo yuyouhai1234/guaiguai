@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>预约管理</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="../../css/personcenter_css/user_bespeak-1.css">
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+</head>
+<body>
+	<div class="order-list-box" id="wrapper">
+		<div class="order-list-cont"></div>
+		<div id="no-bespeak">
+			<span>您还没有预约哦！</span><br><a href="javascript:;" class="now-bespeak">现在去预约</a>
+		</div>
+	</div>
+	<div id="order-info" class="hidden">
+		<!--<div class="order-list">
+			<div class="order-school-info">
+				<span class="school-name"><dataschool_name></span>
+				<span class="order-time"><datatrain_date></span>
+			</div>
+			<div class="order-info">
+				<div class="order-tit"><span>培训科目：</span><b class="class-num">科目<datatrain_subject></b></div>
+				<div class="order-tit"><span>培训班次：</span><b class="bespeak-class"><datastart_time>~<dataend_time></b></div>
+				<div class="order-tit"><span>培训车辆：</span><b class="bespeak-num"><dataplate_num>(<datacoach_name>)</b></div>
+				<div class="order-tit"><span>培训状态：</span><b class="despeak-status"></b></div>
+				<div class="order-tit"><span>培训地址：</span><b class="bespeak-add"><datatrain_place></b></div>
+			</div>
+			<div class="order-btn">
+				<input type="button" value="评价" class="for-eva">
+				<input type="button" value="取消" class="quit-bespeak">
+			</div>
+		</div>-->
+	</div>
+	<div class="bg"></div>
+	<div class="worn-box">
+		<p class="result-box"></p>
+		<input type="button" value="确定" id="sure-btn">
+	</div>
+</body>
+<script type="text/javascript" src="../../commonjs/jquery.js"></script>
+<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+<script type="text/javascript" src="../../commonjs/touch.js"></script>
+<script type="text/javascript" src="../../commonjs/iscroll.js"></script>
+<script type="text/javascript" src="../../commonjs/md5-min.js"></script>
+<script type="text/javascript" src="../../js/personcenter_js/user_bespeak-1.js"></script>
+</html>

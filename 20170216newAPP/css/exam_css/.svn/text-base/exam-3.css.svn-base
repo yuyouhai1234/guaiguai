@@ -1,0 +1,172 @@
+html,body{
+	width:100%;
+	height:100%;
+}
+body{
+	display:-webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	-webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -moz-box-orient:vertical;
+    -moz-box-direction:normal;
+    flex-direction:column;
+    -webkit-flex-direction:column;
+}
+.exam-header{
+	width:100%;
+	height:80px;
+	background:#3B3838;
+	text-align:center;
+	line-height:80px;
+	color:#fff;
+	font-size: 36px;
+}
+.exam-main{
+	box-flex:1;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	flex:1;
+	-webkit-flex:1;
+	overflow-y:auto; 
+}
+.exam-tit{
+	width:100%;
+	height:60px;
+	box-shadow:1px 1px 2px 2px #ccc;
+	font-family: "微软雅黑";
+	position:relative; 
+}
+.km-one,.km-four{
+	display:inline-block;
+	width:49%;
+	line-height:60px;
+	text-align: center;
+	font-size:30px;
+}
+.active{
+	color:#50B8F8;
+}
+.tit-line{
+	width:50%;
+	height:2px;
+	background:#50B8F8;
+	position:absolute;
+	left:0;
+	bottom:0;
+	transition:all 0.5s linear;
+}
+/* 科目一章节练习 */
+.km-one-cont{
+	display:block;
+}
+.module-exam{
+	width:100%;
+	height:280px;
+	box-shadow: 1px 1px 2px 2px #ccc;
+	position:relative;
+	margin-top:30px;
+}
+.module-exam-outer{
+	width:220px;
+	height:220px;
+	background:#FAD6AF;
+	border-radius: 50%;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-110px;
+	margin-top:-110px;
+	transition:all 1s linear;
+}
+.module-exam-inner{
+	width:200px;
+	height:200px;
+	background:#F1A653;
+	border-radius: 50%;
+	margin:0 auto;
+	margin-top:10px;
+	line-height:200px;
+	text-align: center;
+	font-size:34px;
+	font-family:"微软雅黑";
+	color:#fff;
+	transition:all 1s linear;
+}
+.module-exam-info,.module-exam-list{
+	width:100%;
+	height:100%;
+}
+.module-exam-list{
+	box-sizing:border-box;
+	padding:10px;
+}
+.module-exam-info li{
+	float:left;
+	width:50%;
+	height:50%;
+	line-height:130px;
+	box-sizing:border-box;
+	font-size:28px;
+	font-family:"微软雅黑";
+	color:#7E7D7D;
+}
+.module-exam-info li:nth-child(1){
+	padding-left:50px;
+	border:1px solid #F8F7F6;
+	border-left:0;
+	border-top:0;
+}
+.module-exam-info li:nth-child(2){
+	padding-right:50px;
+	border-bottom:1px solid #F8F7F6;
+	text-align: right;
+}
+.module-exam-info li:nth-child(3){
+	padding-left:50px;
+	border-right:1px solid #F8F7F6;
+}
+.module-exam-info li:nth-child(4){
+	padding-right:50px;
+	text-align: right;
+}
+/* 科目一模拟考试 */
+.simulate-exam-outer{
+	background:#B5F7F6;
+}
+.simulate-exam-inner{
+	background:#24E9E7;
+}
+/* 分享 */
+.share-box{
+	margin-top:100px;
+	width:100%;
+	height:200px;
+	box-sizing:border-box;
+	padding:0 30px;
+}
+.share-tit{
+	height:80px;
+	text-align: center;
+	font-size:12px;
+	color:#959191;
+	line-height:80px;
+	font-family:"微软雅黑";
+	box-sizing:border-box;
+	border-bottom:1px solid #eee;
+}
+.share-way{
+	width:90%;
+	margin: 0 auto;
+	margin-top:20px;
+}
+.way{
+	display:inline-block;
+	width:30%;
+	text-align: center;
+}
+.km-four-cont{
+	display:none;
+}

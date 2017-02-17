@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="../../css/personcenter_css/personcerter-3.css?v=20161129">
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+	<link rel="stylesheet" href="../../commoncss/main.css">
+	<script type="text/javascript" src="../../commonjs/jquery.js"></script>
+	<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+	<script type="text/javascript" src="../../commonjs/touch.js"></script>
+	<script type="text/javascript" src="../../commonjs/iscroll.js"></script>
+	<script type="text/javascript" src="../../commonjs/md5-min.js"></script>
+	<script type="text/javascript" src="../../commonjs/mobilyblocks.js"></script>
+	<script type="text/javascript" src="../../commonjs/main.js"></script>
+	<script type="text/javascript" src="../../commonjs/common.js"></script>
+	<script type="text/javascript" src="../../js/personcenter_js/personcenter-9.js?v=20161129"></script>
+</head>
+<body>
+	<div class="coach-list-cont" id="wrapper">
+		<div class="coach-list-box" id="list-box">
+			<!--以下是头部资料-->
+			<div class="headdatebox">
+				<div class="uptubox">				
+					<div class="updatebox">
+						<p>用户名：<span class="user-name"></span><span class="user-phone"></span></p>						
+					</div>					
+				</div>
+				<div class="otherdate">
+					<div>
+						<p>红包</p>
+						<p class="money-info">0.00</p>						
+					</div>
+					<span class="otherline"></span>
+					<div>
+						<p>培训进度</p>
+						<p class="train-speed">暂无</p>	
+					</div>
+				</div>
+			</div>
+			<!--以下是模块部分-->	
+			<div class="person-bottom">
+				<ul class="person-list">
+					<li>
+						<a href="javascript:;">
+							<img src="../../images/gerenziliao51_37.png">
+							<p>设置</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="../../images/qianbao43_1_44.png">
+							<p>红包</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="../../images/fenxiangma44_44.png">
+							<p>分享码</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="../../images/dingdanguali34_44.png">
+							<p>报名管理</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="../../images/yuyuechaxun44_44.png">
+							<p>预约管理</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<img src="../../images/xuechejindu44_44.png">
+							<p>学车进度</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--以下是菜单-->
+	<div id="nature">
+	    <div class="nature">
+		    <h1>导航</h1>
+		    <ul class="reset">
+		      <li><a href="../../index.html">首页</a></li>
+		      <li><a href="#">个人中心</a></li>
+		      <li><a href="../exam_html/simulate.html">理论<br>模拟</a></li>
+		      <li><a href="../video_html/index.html">乖乖<br>视频</a></li>
+		      <li><a href="../product_html/product_list.html">驾考<br>报名</a></li>
+		      <li><a href="../bespeak_html/coach.html">培训<br>预约</a></li>
+		      <li><a href="../product_html/map.html">周边<br>驾校</a></li>
+		    </ul>
+	  	</div>
+  	</div>
+</body>
+</html>

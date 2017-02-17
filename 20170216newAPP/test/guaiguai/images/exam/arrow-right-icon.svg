@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-right-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="模拟考试-10" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="模拟考试-理论模拟" transform="translate(-312.000000, -364.000000)">
+            <g id="arrow-right-icon" transform="translate(312.000000, 364.000000)">
+                <rect id="Rectangle-5" fill="#FFFFFF" x="0" y="0" width="24" height="24"></rect>
+                <polygon id="Shape" fill="#E0E0E0" points="8 7.4 9.51351351 6 16 12 9.51351351 18 8 16.6 12.972973 12"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

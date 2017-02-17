@@ -1,0 +1,40 @@
+$(document).ready(function(){
+	function bodyScale(){
+		var devicewidth=document.documentElement.clientWidth;
+		var scale=devicewidth/640;
+		document.body.style.zoom=scale;
+	}
+	window.onload=window.onresize=function(){
+		bodyScale();
+		$('html,body').show();
+	}
+	if(localStorage.getItem('phone')){
+		$('#login-user-tel').val(localStorage.getItem('phone'));
+	}
+	$('#login-btn').on('tap',function(){
+		var 
+			tel=$('#login-user-tel').val(),
+			pwd=$('#login-user-pwd').val();
+		var openid=localStorage.getItem('openid');
+		if(tel==''||pwd==''){
+			$('.error-box').eq(2).html('请填写您的手机号或者密码')
+		}else{
+			$.ajax({
+				type:"post",
+				url:'https://guaiguaixueche.com.cn/api/login',
+				data:{telephone:tel,password:pwd,openid:openid},
+				dataType:'json',
+				success:function(data){
+					if(data.code=='error'){
+						$('.error-box').eq(2).html(data.content)
+					}else{
+						$('.error-box').eq(2).html('');
+						localStorage.setItem('person_id',data.content);
+						alert('登录成功');
+						window.open('../../index.html','_self');
+					}
+				}
+			})
+		}	
+	})
+})

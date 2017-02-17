@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>产品列表</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="../../css/product_css/product_list.css">
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+</head>
+<body>
+	<div class="product-list-cont" id="wrapper">
+<<<<<<< .mine
+		<div class="product-list-box" id="list-box">
+			<dl class="product-list-dl">
+				<dt class="product-pic">
+					<img src="../../images/newslisttupian.png">
+				</dt>
+				<dd class="product-cont">
+					<div class="cont-main"><span class="cont-tit">产品名称：</span><b class="cont-diff">C1 VIP班</b></div>
+					<div class="cont-main"><span class="cont-tit">价格区间：</span><b class="cont-diff">6000-7000</b></div>
+				</dd>
+			</dl>
+			<dl class="product-list-dl">
+				<dt class="product-pic">
+					<img src="../../images/newslisttupian.png">
+				</dt>
+				<dd class="product-cont">
+					<div class="cont-main"><span class="cont-tit">产品名称：</span><b class="cont-diff">C1 VIP班</b></div>
+					<div class="cont-main"><span class="cont-tit">价格区间：</span><b class="cont-diff">6000-7000</b></div>
+				</dd>
+			</dl>
+			<dl class="product-list-dl">
+				<dt class="product-pic">
+					<img src="../../images/newslisttupian.png">
+				</dt>
+				<dd class="product-cont">
+					<div class="cont-main"><span class="cont-tit">产品名称：</span><b class="cont-diff">C1 VIP班</b></div>
+					<div class="cont-main"><span class="cont-tit">价格区间：</span><b class="cont-diff">6000-7000</b></div>
+				</dd>
+			</dl>
+			<dl class="product-list-dl">
+				<dt class="product-pic">
+					<img src="../../images/newslisttupian.png">
+				</dt>
+				<dd class="product-cont">
+					<div class="cont-main"><span class="cont-tit">产品名称：</span><b class="cont-diff">C1 VIP班</b></div>
+					<div class="cont-main"><span class="cont-tit">价格区间：</span><b class="cont-diff">6000-7000</b></div>
+				</dd>
+			</dl>
+			<dl class="product-list-dl">
+				<dt class="product-pic">
+					<img src="../../images/newslisttupian.png">
+				</dt>
+				<dd class="product-cont">
+					<div class="cont-main"><span class="cont-tit">产品名称：</span><b class="cont-diff">C1 VIP班</b></div>
+					<div class="cont-main"><span class="cont-tit">价格区间：</span><b class="cont-diff">6000-7000</b></div>
+				</dd>
+			</dl>
+=======
+		<div class="product-list-box" id="list-box">			
+>>>>>>> .r23
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../../commonjs/jquery.js"></script>
+<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+<script type="text/javascript" src="../../commonjs/touch.js"></script>
+<script type="text/javascript" src="../../commonjs/iscroll.js"></script>
+<script type="text/javascript" src="../../js/product_js/product_list.js"></script>
+</html>

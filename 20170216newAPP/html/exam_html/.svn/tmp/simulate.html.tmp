@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>模拟考试</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="../../css/exam_css/exam-1.css">
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+</head>
+<body>
+	<div class="exam-tit">
+		<span class="km-one km-tit">科目一</span>
+		<span class="km-four km-tit">科目四</span>
+		<span class="tit-line"></span>
+	</div>
+	<div class="exam-main" id="exam-cont">
+		<div class="km-one-cont km-box">
+			<div class="module-exam">
+				<div class="module-exam-outer">
+					<div class="module-exam-inner">
+						章节练习
+					</div>
+				</div>
+				<div class="module-exam-info">
+					<ul class="module-exam-list">
+						<li style="color:#ddd">随机练习</li>
+						<li style="color:#ddd">专项练习</li>
+						<li style="color:#ddd">难题攻克</li>
+						<li style="color:#ddd">背题模式</li>
+					</ul>
+				</div>
+			</div>
+			<div class="module-exam simulate-exam">
+				<div class="module-exam-outer simulate-exam-outer">
+					<div class="module-exam-inner simulate-exam-inner">
+						模拟考试
+					</div>
+				</div>
+				<div class="module-exam-info">
+					<ul class="module-exam-list">
+						<li style="color:#ddd">VIP包过</li>
+						<li style="color:#ddd">我的错题</li>
+						<li style="color:#ddd">成绩排行</li>
+						<li style="color:#ddd">考前冲刺</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="km-four-cont km-box">
+			<div class="module-exam">
+				<div class="module-exam-outer">
+					<div class="module-exam-inner">
+						章节练习
+					</div>
+				</div>
+				<div class="module-exam-info">
+					<ul class="module-exam-list">
+						<li style="color:#ddd">随机练习</li>
+						<li style="color:#ddd">专项练习</li>
+						<li style="color:#ddd">难题攻克</li>
+						<li style="color:#ddd">背题模式</li>
+					</ul>
+				</div>
+			</div>
+			<div class="module-exam simulate-exam">
+				<div class="module-exam-outer simulate-exam-outer">
+					<div class="module-exam-inner simulate-exam-inner">
+						模拟考试
+					</div>
+				</div>
+				<div class="module-exam-info">
+					<ul class="module-exam-list">
+						<li style="color:#ddd">VIP包过</li>
+						<li style="color:#ddd">我的错题</li>
+						<li style="color:#ddd">成绩排行</li>
+						<li style="color:#ddd">考前冲刺</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+<script type="text/javascript" src="../../commonjs/touch.js"></script>
+<script type="text/javascript" src="../../js/exam_js/exam-1.js"></script>
+</html>

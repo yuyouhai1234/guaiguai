@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>play-count-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.99396429,1.90323947e-16 C3.57903571,1.90323947e-16 0,3.57841071 0,7.99260714 C0,12.4067857 3.57903571,15.9852143 7.99396429,15.9852143 C12.4089107,15.9852143 15.9879464,12.4067857 15.9879464,7.99260714 C15.9879464,3.57842857 12.4089107,0 7.99396429,0 L7.99396429,1.90323947e-16 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15.9879464" height="15.9852143" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="乖乖视频-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="乖乖视频" transform="translate(-152.000000, -368.000000)">
+            <g id="play-count-icon" transform="translate(152.000000, 368.000000)">
+                <use id="Shape" stroke="#9E9E9E" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                <path d="M11.6268036,8.09795089 L6.26807143,5.02446875 C6.21085714,4.99184375 6.14635714,4.99184375 6.08932143,5.02446875 C6.03241071,5.05741518 6,5.11343304 6,5.17848661 L6,11.3260402 C6,11.3916652 6.03241071,11.4470937 6.08932143,11.480058 C6.14632143,11.5127902 6.21085714,11.5127902 6.26807143,11.4803616 L11.6268036,8.40652232 C11.6836964,8.37380804 11.7164643,8.31802232 11.7164643,8.25220089 C11.7164643,8.18668304 11.6837143,8.13093304 11.6268036,8.09793304 L11.6268036,8.09795089 Z" id="Shape" fill="#9E9E9E"></path>
+            </g>
+        </g>
+    </g>
+</svg>

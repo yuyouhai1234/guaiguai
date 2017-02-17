@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>nav-icon-sim</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M16.32,1 L0.96,1 L0.96,23 L22.08,23 L22.08,7 L23.04,7 L23.04,0 L16.32,0 L16.32,1 Z M23.04,0 L23.04,24 L0,24 L0,0 L23.04,0 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23.04" height="24" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <polygon id="path-3" points="10.1823376 -1.39339828 15.9423376 -1.39339828 15.9423376 19.6066017 13.0623376 22.6066017 10.1823376 19.6066017"></polygon>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5.76" height="24" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="首页-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页" transform="translate(-123.000000, -595.000000)" stroke="#FFFFFF">
+            <g id="nav-icon-sim" transform="translate(123.000000, 595.000000)">
+                <g id="Group-16">
+                    <use id="Combined-Shape" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <use id="Rectangle-4" mask="url(#mask-4)" stroke-width="2" transform="translate(13.062338, 10.606602) rotate(-315.000000) translate(-13.062338, -10.606602) " xlink:href="#path-3"></use>
+                    <path d="M16.1912361,5.74170706 L20.3719127,5.74170706" id="Line" stroke-linecap="square" transform="translate(18.591913, 5.741707) rotate(-315.000000) translate(-18.591913, -5.741707) "></path>
+                    <path d="M5.53602164,15.9947554 L10.141437,15.9947554" id="Line" stroke-linecap="square" transform="translate(8.056022, 15.994755) rotate(-315.000000) translate(-8.056022, -15.994755) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

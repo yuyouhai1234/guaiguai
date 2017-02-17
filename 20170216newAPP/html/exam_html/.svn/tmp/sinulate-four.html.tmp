@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>科目四模拟考试</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+	<script type="text/javascript" src="../../commonjs/touch.js"></script>
+<<<<<<< .mine
+	<script type="text/javascript" src="../../js/exam_js/simulate-four-1.js"></script>
+	<link rel="stylesheet" href="../../css/exam_css/simulate-one-1.css">
+=======
+	<script type="text/javascript" src="../../js/exam_js/simulate-four.js"></script>
+	<link rel="stylesheet" href="../../css/exam_css/simulate-one-1.css">
+>>>>>>> .r132
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+</head>
+<body class="simulate-box">
+	<div class="simulate-one-cont">
+		<div class="user-pic">
+			<dl>
+				<dt class="user-photo"><img src="../../images/pic4.png"></dt>
+				<dd class="user-add">乖乖学车学员</dd>
+				<dd class="for-update">(您可以登录学员中心更新个人资料哦)</dd>
+			</dl>
+		</div>
+		<div class="about-list">
+			<ul class="exam-list">
+				<li><span class="exam-tit">考试科目</span><b class="about-cont">科目四理论考试</b></li>
+				<li><span class="exam-tit">考试题库</span><b class="about-cont">全国通用 小车(C1,C2,C3)</b></li>
+				<li><span class="exam-tit">考试标准</span><b class="about-cont">50题 45分钟</b></li>
+				<li><span class="exam-tit">合格标准</span><b class="about-cont">满分100分，90分为合格</b></li>
+			</ul>
+		</div>
+		<div class="exam-start">
+			<input type="button" name="" value="全真模拟考试" class="start-btn" id="start-exam">
+		</div>
+	</div>
+	<div class="rule-box">
+		<p class="rule-info">根据你最新交规考试要求，科目四考试答题后不能修改答案，合格标准为90分。(全真模拟驾考规则，你值得拥有)</p>
+		<input type="button" name="" value="开始考试" class="btn-start" id="start-one">
+	</div>
+	<div class="mb-bg">
+		
+	</div>
+</body>
+</html>

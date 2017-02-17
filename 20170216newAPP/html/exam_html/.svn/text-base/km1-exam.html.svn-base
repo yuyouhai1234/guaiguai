@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>科目一模拟考试</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="../../css/exam_css/km1-exam-3.css?v=20161129">
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+	<script type="text/javascript" src="../../commonjs/jquery.js"></script>
+	<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+	<script type="text/javascript" src="../../commonjs/touch.js"></script>
+	<script type="text/javascript" src="../../commonjs/main.js"></script>
+	<script type="text/javascript" src="../../js/exam_js/km1-exam-8.js?v=20161129"></script>
+</head>
+<body class="exam-outer">
+	<div class="km1-exam-header">
+		<ul class="exam-about-head">
+			<li id="exam-time"></li>
+			<li id="close-exam">交卷</li>
+		</ul>
+	</div>
+	<div class="exam-content"></div>
+	<div class="exam-footer">
+		<input type="button" name="" value="上一题" id="prev-btn" class="for-subject">
+		<input type="button" name="" value="下一题" id="next-btn" class="for-subject">
+		<input type="button" name="" value="答题卡" id="answer-sheet" class="for-subject">
+	</div>
+	<div class="answer-card">
+		<ul class="answer-list"></ul>
+	</div>
+	<div class="cj-box">
+		<p class="cj-num">本次模拟考试成绩为<span class="cj-info"></span>分</p>
+		<input type="button" value="再来一次" id="again-btn">
+	</div>
+	<div class="bg-filter"></div>
+</body>
+</html>

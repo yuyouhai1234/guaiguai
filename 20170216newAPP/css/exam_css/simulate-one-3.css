@@ -1,0 +1,148 @@
+html,body{
+	width:100%;
+	height:100%;
+}
+.simulate-box{
+	display:-webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	-webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -moz-box-orient:vertical;
+    -moz-box-direction:normal;
+    flex-direction:column;
+    -webkit-flex-direction:column;
+	position:relative;
+}
+.simulate-one-header{
+	width:100%;
+	height:80px;
+	background:#3B3838;
+	line-height:80px;
+	color:#fff;
+	font-size: 36px;
+	text-align: center;
+}
+.simulate-one-cont{
+	box-flex:1;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	flex:1;
+	-webkit-flex:1;
+	width:100%;
+	overflow-y:auto; 
+}
+.user-pic{
+	width:80%;
+	margin:0 auto;
+	margin-top:50px;
+	text-align: center;
+	font-family: "微软雅黑";
+}
+.user-photo{
+	width:165px;
+	height:165px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin:0 auto;
+}
+.user-add{
+	line-height:50px;
+	height:50px;
+	font-size:22px;
+	color:#333131;
+}
+.for-update{
+	font-size:12px;
+	color:#525050;
+	height:60px;
+	line-height:60px;
+}
+.about-list{
+	width:80%;
+	margin:0 auto;
+	margin-top:50px;
+}
+.exam-list{
+	width:100%;
+	
+}
+.exam-list li{
+	width:100%;
+	height:60px;
+	line-height:60px;
+	border-top:1px solid #ccc;
+}
+.exam-list li:nth-child(4){
+	border-bottom:1px solid #ccc;
+}
+.exam-tit{
+	display:inline-block;
+	width:20%;
+	text-align: left;
+}
+.about-cont{
+	display:inline-block;
+	width:80%;
+	text-align: right;
+}
+.exam-start{
+	width:80%;
+	margin:0 auto;
+	margin-top:50px;
+}
+.start-btn{
+	width:100%;
+	height:60px;
+	line-height:60px;
+	background:#E88847;
+	border:0;
+	border-radius:50px; 
+	font-size:30px;
+	color:#fff;
+	font-family: "微软雅黑";
+	letter-spacing: 3px;
+}
+/* 以下是弹出框效果 */
+.mb-bg{
+	width:100%;
+	height:100%;
+	background:rgba(109,108,107,0.8);
+	position:absolute;
+	left:0;
+	top:0;
+	display:none;
+}
+.rule-box{
+	display:none;
+	width:500px;
+	height:300px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-150px;
+	margin-left:-250px;
+	background:#fff;
+	border-radius: 20px;
+	box-sizing:border-box;
+	padding:20px;
+	z-index:2;
+}
+.rule-info{
+	line-height:50px;
+}
+.btn-start{
+	width:100%;
+	height:60px;
+	line-height:60px;
+	background:#E88847;
+	border:0;
+	border-radius:50px; 
+	font-size:30px;
+	color:#fff;
+	font-family: "微软雅黑";
+	letter-spacing: 3px;
+	margin-top:10px;
+}

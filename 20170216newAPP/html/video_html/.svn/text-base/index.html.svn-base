@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>乖乖视频</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="../../css/video_css/index-3.css?v=20161129">
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+	<link rel="stylesheet" href="../../commoncss/main.css">
+	<script type="text/javascript" src="../../commonjs/jquery.js"></script>
+	<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+	<script type="text/javascript" src="../../commonjs/touch.js"></script>
+	<script type="text/javascript" src="../../commonjs/iscroll.js"></script>
+	<script type="text/javascript" src="../../commonjs/main.js"></script>
+	<script type="text/javascript" src="../../commonjs/mobilyblocks.js"></script>
+	<script type="text/javascript" src="../../commonjs/common.js"></script>
+	<script type="text/javascript" src="../../js/video_js/index-8.js?v=20161129"></script>
+</head>
+<body class="video-box">
+	<div class="video-list-cont" id="wrapper">
+		<div class="main-cont"></div>
+	</div>
+	<div class="video-menu">
+		<ul class="menu-list">
+			<li class="list-cont" dataid="1">科目二</li>
+			<li class="list-cont">科目三</li>
+			<li class="list-cont" dataid="3">学车技巧</li>
+		</ul>
+	</div>
+	<!---下文档变为模板---->
+	<div class="hidden" data_id="1" id="teach-video">
+		<!--<dl video_id="<datavideo_id>" class="teach-video-list">
+			<dt class="video-list-pic">
+				<img src="http://cdn.guaiguaixueche.com/<datacover_pic_path>">
+				<div class="pic-tit"><datav_description></div>
+			</dt>
+			<dd class="v-tit">
+				<span class="v-tit-info">视频名称：<datav_title></span>
+				<span class="v-down">播放次数：<datadown_count></span>
+			</dd>
+		</dl>-->
+	</div>
+	<div class="hidden" id="play-video">
+		<!--<dl video_id="<datavideo_id>" class="teach-video-list">
+			<dt class="video-list-pic">
+				<img src="http://cdn.guaiguaixueche.com/<datacover_pic_path>">
+				<div class="pic-tit"><datav_title></div>
+			</dt>
+			<dd class="v-tit">
+				<span class="v-tit-info">视频名称：<datav_title></span>
+				<span class="v-down">播放次数：<data></span>
+			</dd>
+		</dl>-->
+	</div>
+	<div class="hidden" id="ad-video">
+		<!--<dl video_id="<datavideo_id>" class="teach-video-list">
+			<dt class="video-list-pic">
+				<img src="http://cdn.guaiguaixueche.com/<datacover_pic_path>">
+				<div class="pic-tit"><datav_title></div>
+			</dt>
+			<dd class="v-tit">
+				<span class="v-tit-info">视频名称：<datav_title></span>
+				<span class="v-down">播放次数：<data></span>
+			</dd>
+		</dl>-->
+	</div>
+	<!--以下是菜单-->
+	<div id="nature">
+	    <div class="nature">
+		    <h1>导航</h1>
+		    <ul class="reset">
+		      <li><a href="../../index.html">首页</a></li>
+		      <li><a href="../personcenter_html/personcenter.html">个人<br>中心</a></li>
+		      <li><a href="../exam_html/simulate.html">理论<br>模拟</a></li>
+		      <li><a href="#">乖乖视频</a></li>
+		      <li><a href="../product_html/product_list.html">驾考<br>报名</a></li>
+		      <li><a href="../bespeak_html/coach.html">培训<br>预约</a></li>
+		      <li><a href="../product_html/map.html">周边<br>驾校</a></li>
+		    </ul>
+	  	</div>
+  	</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+.module-header{
+	width:100%;
+	height:80px;
+	background:#3B3838;
+	text-align:center;
+	line-height:80px;
+	color:#fff;
+	font-size: 36px;
+}
+.module-exam-cont{
+	width:100%;
+	height:100%;
+}
+.module-exam-list{
+	width:100%;
+	position:relative;
+}
+.module-exam-list li{
+	height:80px;
+	width:100%;
+	line-height:80px;
+	font-size:24px;
+	font-family: "微软雅黑";
+	background:linear-gradient(to bottom,#fff 0%,#fff 20%,#FCB28A 100%);
+	box-sizing:border-box;
+	padding-left:20px;
+	border-radius: 10px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.module-tit{
+	margin:0 30px;
+}

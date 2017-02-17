@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>教练列表</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="../../css/bespeak_css/coach-1.css">
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+</head>
+<body>
+	<div class="coach-list-cont" id="wrapper">
+		<div class="coach-list-box" id="list-box"></div>
+	</div>
+</body>
+<script type="text/javascript" src="../../commonjs/jquery.js"></script>
+<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+<script type="text/javascript" src="../../commonjs/touch.js"></script>
+<script type="text/javascript" src="../../commonjs/iscroll.js"></script>
+<script type="text/javascript" src="../../js/bespeak_js/coach-1.js"></script>
+</html>

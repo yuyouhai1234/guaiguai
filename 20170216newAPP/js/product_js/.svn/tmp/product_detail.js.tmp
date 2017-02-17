@@ -1,0 +1,132 @@
+$(document).ready(function(){
+	function bodyScale(){
+		var devicewidth=document.documentElement.clientWidth;
+		var scale=devicewidth/640;
+		document.body.style.zoom=scale;
+	}
+	var design_id=sessionStorage.getItem('design_id');
+	//console.log(design_id);
+	window.onload=window.onresize=function(){
+		bodyScale();
+		var myScroll=new IScroll('#wrapper',{
+			vScroll:false,//禁止垂直滚动
+            snap:true,//执行传送带效果
+            hScrollbar:false//隐藏水平方向上的滚动条
+		})	
+	}
+	
+	var arr=[];
+	productList(design_id,'')
+	function productList(design_id,schoolName){
+		$.ajax({
+			url:'https://guaiguaixueche.com.cn/api/list/school',
+			type:"post",
+			dataType:'json',
+			async:false,
+			cache: false,
+			data:{design_id:design_id,school_name:schoolName},
+			success:function(data){
+				if(data.code=="success"){
+					var list=data.list;
+					for(var i=0;i<list.length;i++){
+						var detailDl=$('<dl class="detail-list"></dl>');
+						var detailDt=$('<dt class="detail-pic"></dt>');
+						var detailDd=$('<dd class="detail-cont"></dd>');
+						var detailDlPic=$('<img src="http://cdn.guaiguaixueche.com/'+list[i].product_pic+'">');
+						var detailName=$('<p>驾校名称：<span>'+list[i].school_name+'</span></p>');
+						var detailPerNum=$('<p>剩余人数：<span class="personPlus">'+list[i].amount+'</span>人</p>');
+						var detailPice=$('<p>驾校报价：<span class="school-price">￥'+list[i].sum_price+'</span></p>');
+						var detailCutPiec=$('<p>支付定金：<span class="cut-price">￥'+list[i].coupon+'</span><br><span class="cut-info">(线上支付线下可享受<b>'+list[i].coupon_price+'</b>元优惠)</span></p>');
+						if(list[i].service_standard==undefined){
+							list[i].service_standard='';
+						}else(
+							list[i].service_standard=list[i].service_standard
+						)
+						var detailServices=$('<p class="service-txt">服务标准：<span class="stand-cont">'+list[i].service_standard+'</span></p>');
+						var detailBtn=$('<input type="button" value="我要报名" class="appoint-btn">');
+						$('.detail-main-box').append(detailDl);						
+						detailDl.append(detailDt);
+						detailDl.append(detailDd);
+						detailDt.append(detailDlPic);
+						detailDd.append(detailName);
+						detailDd.append(detailPerNum);
+						detailDd.append(detailPice);
+						detailDd.append(detailCutPiec);
+						detailDd.append(detailServices);
+						detailDd.append(detailBtn);	
+						arr.push(list[i].school_id);
+					}
+					$('.detail-pic').on('tap',function(){									
+						var index=$('.detail-pic').index($(this));
+						sessionStorage.setItem('school_id',arr[index]);
+						window.open('school-detail.html','_self')
+					})
+					bmFun(data)
+				}
+			}
+		})
+	}
+	
+	$('.search-btn').on('tap',function(){		
+		$('.detail-main-box').empty();
+		productList(design_id,$('.search-txt').val())
+	})
+	/*以下是查看是否能报名成功*/
+	var det=localStorage.getItem('person_id');
+	function bmFun(datas){
+		var arr1=[];
+		var arr2=[];
+		var arr3=[];
+		for(var i=0;i<datas.list.length;i++){
+			arr1.push(datas.list[i].product_id);
+			arr2.push(datas.list[i].school_id);
+			arr3.push(datas.list[i].coupon);
+		}
+		$('.appoint-btn').on('tap',function(){
+			var index=$('.appoint-btn').index($(this));
+			var product_id=arr1[index];
+			var school_id=arr2[index];
+			var pay_price=arr3[index];
+			if(det==null){
+				alert('请登录！');
+<<<<<<< .mine
+				//window.open('http://wx.guaiguaixueche.com/weChat/studentlogin/tologin?code='+sessionStorage.getItem('code'),'_self')
+=======
+				console.log(code);
+				
+>>>>>>> .r75
+			}else{
+				$.ajax({
+					url:'httpss://guaiguaixueche.com.cn/api/toOrder',
+					type:"post",
+					dataType:'json',
+					async:false,
+					cache: false,
+					data:{person_id:det,product_id:product_id,school_id:school_id,pay_price:pay_price},
+					success:function(data){
+						if(data.code=="success"){
+							alert('报名成功');
+							var str=JSON.stringify(data.content);
+							sessionStorage.setItem('bmInfo',str);							
+							var perNumber=parseInt($('.personPlus').eq(index).html());
+							if(perNumber>0){
+								perNumber--;
+							}else{
+								perNumber=0
+								alert('不好意思，已满额')
+							}
+							$('.personPlus').eq(index).html(perNumber)														
+							$('.appoint-btn').css('background','#F85F0D').eq(index).css('background','#E4E4E4');
+							window.open('pay.html','_self');
+						}else if(data.code=="already"){
+							alert(data.content);
+						}else{
+							alert(data.content);
+						};
+					}		
+				})
+			}
+		})
+	}
+	
+})

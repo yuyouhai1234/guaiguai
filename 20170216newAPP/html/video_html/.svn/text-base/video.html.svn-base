@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>视频教学</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="../../css/video_css/video-3.css?v=20161129">
+	<link rel="stylesheet" href="../../commoncss/reset.css">
+	<script type="text/javascript" src="../../ckplayer/jquery.min.js"></script>
+	<script type="text/javascript" src="../../commonjs/zepto-1.1.6.min.js"></script>
+	<script type="text/javascript" src="../../commonjs/touch.js"></script>
+	<script type="text/javascript" src="../../js/video_js/video-8.js?v=20161129"></script>
+	<script type="text/javascript" src="../../commonjs/md5-min.js"></script>
+	<script type="text/javascript" src="../../commonjs/main.js"></script>
+	<script type="text/javascript" src="../../ckplayer/ckplayer.js"></script>
+</head>
+<body>
+	<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+	<div class="video-main">
+		<p class="adjest-box">(为保证播放流畅，建议在wifi环境下播放)</p>
+		<div class="video-outer-box" id="a1"></div>
+		<div class="video-down-box"></div>
+		<dl class="video-info"></dl>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+$(document).ready(function(){
+	function bodyScale(){
+		var devicewidth=document.documentElement.clientWidth;
+		var scale=devicewidth/640;
+		document.body.style.zoom=scale;
+	}	
+	window.onload=window.onresize=function(){
+		bodyScale();
+		$('html,body').show();
+	}
+	var myScroll=new IScroll('#wrapper',{
+		vScroll:false,
+        snap:false,
+        hScrollbar:false
+	})
+	function shuaxinscroll(){
+		setTimeout(function(){myScroll.refresh()},500)
+	}
+	var yueDet=localStorage.getItem('person_id');
+	//var yueDet='9a63fca6c83e430997b1ef9c2a1b94e6';
+	//console.log(yueDet);
+	if(yueDet==null){
+		alert('请先登录');
+		window.open('../../html/loginReg_html/login.html','_self')
+	}else{
+	var arr=[];
+	$.ajax({
+			type: "POST",
+			url: "https://guaiguaixueche.com.cn/api/list/coach",
+			data: {person_id:yueDet},
+			async:false,
+			cache: false, 
+			success: function(data){
+				if(data.code=="success"){					
+					var teaList=data.content;
+					if(teaList.length==0){
+						alert('暂无教练信息');
+						window.open('../../index.html','_self');
+					}else{
+						for(var i=0;i<teaList.length;i++){
+							var coachDl=$('<dl class="coach-list"></dl>');
+							var coachDt=$('<dt class="coach-pic"></dt>');
+							var coachDd=$('<dd class="coach-msg"></dd>');
+							var teaPic=$('<img src="'+teaList[i].coach_icon+'">');
+							var teaName=$('<p class="j-teaName">教练名称：<span>'+teaList[i].coach_name+'</span></p>');
+							var teaTel=$('<p class="j-teaName">联系电话：<span>'+teaList[i].telephone+'</span></p>');
+							var skill=$('<div class="coach-eva skill-containter" skill="'+teaList[i].train_skills+'">培训技能：</div>');
+							var att=$('<div class="coach-eva attitude-cont" skill="'+teaList[i].service_attitude+'">服务态度：</div>');
+							var health=$('<div class="coach-eva health-cont" skill="'+teaList[i].car_health+'">车辆卫生：</div>');
+							var teaBtn=$('<input type="button" value="预约" class="coachBtn"/>');
+							var skillBox=$('<span class="skill-box"><span class="add-star"></span><span class="del-star"></span></span>');
+							var attBox=$('<span class="attitude-box"><span class="add-star"></span><span class="del-star"></span></span>');
+							var healthBox=$('<span class="health-box"><span class="add-star"></span><span class="del-star"></span></span>')
+							$('.coach-list-box').append(coachDl);
+							coachDl.append(coachDt);
+							coachDl.append(coachDd);
+							coachDt.append(teaPic);
+							coachDd.append(teaName);
+							coachDd.append(teaTel);
+							skill.append(skillBox)
+							coachDd.append(skill);
+							att.append(attBox);
+							coachDd.append(att);
+							health.append(healthBox);
+							coachDd.append(health);
+							coachDd.append(teaBtn);	
+							arr.push(teaList[i].coach_id);
+							$('.coachBtn').on('tap',function(){
+								window.open('bespeak.html','_self');
+								var index=$('.coachBtn').index($(this));
+								localStorage.setItem('coach_id',arr[index]);
+							})
+							showStar($('.skill-box'),$('.skill-box .del-star'),$('.skill-containter'));
+							showStar($('.attitude-box'),$('.attitude-box .del-star'),$('.attitude-cont'));
+							showStar($('.health-box'),$('.health-box .del-star'),$('.health-cont'));
+						}
+					}	
+				}else if(data.code=="already"){
+					localStorage.setItem('coach_id',data.content);
+					window.open('bespeak.html','_self');						
+				}else if(data.code=="fail"){
+					alert(data.content);
+					window.open('../../index.html','_self');						
+				}else if(data.code=="error"){
+					alert(data.content);						
+				}else if(data.code=='over'){
+					alert(data.content);
+					window.open('../../index.html','_self');
+				}
+				
+			}			
+	})
+	}
+	shuaxinscroll()
+	function showStar(obj1,obj2,obj3){
+		for(var i=0;i<obj3.length;i++){
+			var con_wid=obj1.eq(i).outerWidth();
+	        var del_star=obj2.eq(i);
+	        var n=obj3.eq(i).attr('skill')
+	        var del_move=(n*con_wid)/5;
+	        del_star.css('backgroundPosition',-del_move+"px 0px");
+	        del_star.css('left',del_move+"px");
+		}
+        
+   	}	
+})

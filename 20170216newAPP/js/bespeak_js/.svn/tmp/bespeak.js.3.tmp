@@ -1,0 +1,285 @@
+$(document).ready(function(){
+	function bodyScale(){
+		var devicewidth=document.documentElement.clientWidth;
+		var scale=devicewidth/640;
+		document.body.style.zoom=scale;
+	}
+	window.onload=window.onresize=function(){
+		bodyScale();	
+	}
+	var myScroll=new IScroll('#wrapper',{
+		vScroll:false,//禁止垂直滚动
+        snap:true,//执行传送带效果
+        hScrollbar:false//隐藏水平方向上的滚动条
+	})
+	function shuaxinscroll(){//scroll刷新函数，如果不刷新，则滑动块撑不起来，须注意
+		setTimeout(function(){myScroll.refresh()},500)//加上一个延迟，效果会更好
+	}
+	var yueDet=localStorage.getItem('person_id')
+	$('.home-menu-diff dd').on('tap',function(){
+		if(yueDet==null){
+			alert('请先登录！')
+			//window.open('http://wx.guaiguaixueche.com/weChat/studentlogin/tologin?code='+sessionStorage.getItem('code'),'_self')
+		}
+	})
+	classNew('',2,'wx','');	
+
+	var yueDet=localStorage.getItem('person_id');
+	var detail=localStorage.getItem('coach_id');	
+	function classNew(car_id,train_subject,train_date,carIndex){
+		$.ajax({
+			type: "POST",
+			url: "https://guaiguaixueche.com.cn/api/list/classes",
+			data: {person_id:yueDet,coach_id:detail,car_id:car_id,train_subject:train_subject,train_date:train_date},	
+			async:false,
+			cache: false, 
+			success: function(data){
+				console.log(data)
+				if(data.code=="success"){
+					/*教练名称,电话*/
+					var list=data.coach;
+					var teaName=$('<p>教练名称：<span class="teaName">'+list.coach_name+'</span></p>');
+					var teaTel=$('<p>联系电话：<span class="teaTel">'+list.telephone+'</span></p>');										
+					$('.be-school').append(teaName);
+					$('.be-tel').append(teaTel);
+					/*车辆信息*/					
+					var carList=data.carlist;
+					for(var i=0;i<carList.length;i++){				
+						var carLi=$('<li text="'+carList[i].car_id+'">'+carList[i].plate_num+'</li>')
+						var carID=carList[i].car_id;
+						$('.carDetal-list').append(carLi);						
+					}
+					if(carIndex==''){
+						carIndex=0;
+						$('.carDetal').val(carList[carIndex].plate_num);
+						$('#saveCar_id').val(carList[carIndex].car_id);
+					}else{
+						carIndex=carIndex;
+						$('.carDetal').val(carList[carIndex].plate_num);
+						$('#saveCar_id').val(carList[carIndex].car_id);
+					}											
+					/*班次信息*/
+					$("#saveclass_id").val(2);
+					var classList=data.classesList;
+					for(var j=0;j<classList.length;j++){
+						var calssDl=$('<dl class="times"></dl>')
+						var calssDt=$('<dt class="times-msg"></dt>')
+						var calssDd=$('<dd class="times-btn"></dd>')
+						var yuyueBtn=$('<input type="button"  value="预约"  id="yuyueBtn_'+j+'" class="yuyueBtn"/>')
+						var timeMsg=$('<p>班次：<span>'+classList[j].start_time.substr(0,5)+'</span><b> - </b><span>'+classList[j].end_time.substr(0,5)+'</span></p>');
+						var perMsg=$('<p>剩余：<span class="per-surplus">'+classList[j].surplus_count+'</span>人</p>');
+						var stateMsg='<p>状态：<span class="MSG-yue"></span></p>';
+						var classID=classList[j].class_id;						
+						$('.iscoll').append(calssDl);
+						calssDl.append(calssDt);
+						calssDl.append(calssDd);
+						calssDt.append($(timeMsg));
+						calssDt.append(perMsg);
+						calssDt.append(stateMsg);
+						calssDd.append(yuyueBtn);
+						var timeBegin=classList[j].start_time;
+						var timeEnd=classList[j].end_time;
+						var index=$('.times').length;						
+						/*预约判断*/
+						if(classList[j].is_order==1){
+							$('.MSG-yue').eq(index-1).html('(已预约过)');
+							$('.yuyueBtn').eq(index-1).css('display','none');
+						}else if(classList[j].is_order==0){
+							if(classList[j].surplus_count==0){
+								$('.MSG-yue').eq(index-1).html('已预约满');
+								$('.yuyueBtn').eq(index-1).css('display','none');
+							}else{
+								if(classList[j].flag==1){
+									$('.MSG-yue').eq(index-1).html('可预约');																										
+									// 添加点击事件	
+									$('.yuyueBtn').eq(index-1).attr("onclick",
+								"btnYue('"+classID+"','"+carID+"','"+train_date+"','"+timeBegin+"','"+timeEnd+"','"+yueDet+"','"+(index-1)+"')");	
+								}else if(classList[j].flag==0){
+									$('.MSG-yue').eq(index-1).html('不可预约');
+									$('.yuyueBtn').eq(index-1).css('display','none');
+								}
+							}
+						}							
+					}
+					$('.iscoll dl:last-child').css('border-bottom','0');
+					/*底部时间信息*/					
+					var dateList=data.train_date_list;
+					for(var k=0;k<dateList.length;k++){
+						var dateMsg="";
+						if(train_date==dateList[k]){
+							dateMsg = $('<option value="'+dateList[k]+'" selected >'+dateList[k]+'</option>');
+						} else {
+							dateMsg = $('<option value="'+dateList[k]+'">'+dateList[k]+'</option>');
+						}						
+						$('.select').append(dateMsg);
+						$("#headerSubject").val(dateList[k])					
+					}
+					$('#date_mou').val($('.select').find('option:selected').text());	
+				}
+			}			
+		})
+		carBtn();
+		shuaxinscroll();
+	}
+	/*车辆点击切换 */
+	$('.carDetal').on('tap',function(){
+		$('.carDetal-list').css('display','block')
+		setTimeout(function(){
+			$('.carDetal-list').css('display','none')
+		},5000)
+	})
+	
+	function carBtn(){				
+		$('.carDetal-list li').on('tap',function(){	
+			$('.carDetal-list').css('display','none')
+			var index=$('.carDetal-list li').index($(this));
+			$('.carDetal').val($('.carDetal-list li').eq(index).html())
+			$('#saveCar_id').val($('.carDetal-list li').eq(index).attr('text'))
+			$('.be-school p').empty();
+		 	$('.be-tel p').empty();		 	
+			$('.iscoll').empty();
+			$('.select').empty();				
+			$('.carDetal-list').empty();				
+			classNew($('#saveCar_id').val(),$("#saveclass_id").val(),$('#date_mou').val(),index);			    
+		})		
+	}
+	/*  科目二，三点击切换  */
+	$('.changeClass').click(function(){		
+		if($('.be-class p').html()=="科目二"){
+			var inputValue=$('.carDetal').val();
+			var doo='';
+			for(var m=0;m<$('.carDetal-list li').length;m++){
+				if(inputValue==$('.carDetal-list li').eq(m).html()){
+					doo=m;
+				}
+			}
+			$('.be-class p').html("科目三");
+			$("#saveclass_id").val(3);			
+			$('.be-school p').empty();
+		 	$('.be-tel p').empty();		 	
+		 	$('.carDetal-list').empty();
+			$('.iscoll').empty();
+			$('.select').empty();
+			classNew($("#saveCar_id").val(),$("#saveclass_id").val(),$('#date_mou').val(),doo);
+		}else{
+			var inputValue=$('.carDetal').val();
+			var doo='';
+			for(var m=0;m<$('.carDetal-list li').length;m++){
+				if(inputValue==$('.carDetal-list li').eq(m).html()){
+					doo=m;
+				}
+			}
+			$('.be-class p').html("科目二");						
+			$("#saveclass_id").val(2);			
+			$('.be-school p').empty();
+		 	$('.be-tel p').empty();		 	
+		 	$('.carDetal-list').empty();
+			$('.iscoll').empty();
+			$('.select').empty();
+			classNew($("#saveCar_id").val(),$("#saveclass_id").val(),$('#date_mou').val(),doo);
+		}		
+	})		
+	/*日期点击切换 */
+	function dateChange(date){
+		var inputValue=$('.carDetal').val();
+		var doo='';
+		for(var m=0;m<$('.carDetal-list li').length;m++){
+			if(inputValue==$('.carDetal-list li').eq(m).html()){
+				doo=m;
+			}
+		}
+		$('#date_mou').val(date);	
+		$('.be-school p').empty();
+	 	$('.be-tel p').empty();		 	
+		$('.carDetal-list').empty();
+		$('.iscoll').empty();
+		$('.select').empty();
+		classNew($("#saveCar_id").val(), $("#saveclass_id").val(), date,doo);
+	}	
+	 /*前一天点击切换 */
+	$('.dateBefore').on('tap',function(){
+		var inputValue=$('.carDetal').val();
+			var doo='';
+			for(var m=0;m<$('.carDetal-list li').length;m++){
+				if(inputValue==$('.carDetal-list li').eq(m).html()){
+					doo=m;
+				}
+			}
+		var leng=$('.select option');				
+		for(var i=0;i<leng.length;i++){
+			if($('.select option').eq(i).attr('selected')=='selected'&&(i!=0)){	
+				$('.select option').eq(i).removeAttr('selected')
+				$('.select option').eq(i-1).attr('selected','selected')
+				$('#date_mou').val($('.select option').eq(i-1).val())	
+			}		
+		}
+		$('.be-school p').empty();
+	 	$('.be-tel p').empty();		 	
+	 	$('.carDetal-list').empty();
+		$('.iscoll').empty();
+		$('.select').empty();
+		classNew($("#saveCar_id").val(),$("#saveclass_id").val(),$('#date_mou').val(),doo);
+	})
+	/*后一天点击切换 */
+	$('.dateLater').on('tap',function(){
+		var inputValue=$('.carDetal').val();
+		var doo='';
+		for(var m=0;m<$('.carDetal-list li').length;m++){
+			if(inputValue==$('.carDetal-list li').eq(m).html()){
+				doo=m;
+			}
+		}
+		var leng=$('.select option');			
+		for(var i=leng.length;i>=0;i--){
+			if($('.select option').eq(i).attr('selected')=='selected'&&(i!=leng.length-1)){										
+				$('.select option').eq(i).removeAttr('selected')
+				$('.select option').eq(i+1).attr('selected','selected')	
+				$('#date_mou').val($('.select option').eq(i+1).val())	
+			}		
+		}		
+		$('.be-school p').empty();
+	 	$('.be-tel p').empty();
+	 	$('.carDetal-list').empty();
+		$('.iscoll').empty();
+		$('.select').empty();
+		classNew($("#saveCar_id").val(),$("#saveclass_id").val(),$('#date_mou').val(),doo);		
+	})
+// 点击预约
+function btnYue(classID,carID,train_date,timeBegin,timeEnd,yueDet,index){	
+	$.ajax({
+		type: "POST",
+		url: "https://guaiguaixueche.com.cn/api/appointment",
+		data: {class_id:classID,car_id:carID,train_date:train_date,start_time:timeBegin,end_time:timeEnd,person_id:yueDet},						
+		async:false,
+		cache: false, 
+		success: function(data){				
+			if(data.code=="success"){
+				alert(data.content);
+				var inputValue=$('.carDetal').val();
+				var doo='';
+				for(var m=0;m<$('.carDetal-list li').length;m++){
+					if(inputValue==$('.carDetal-list li').eq(m).html()){
+						doo=m;
+					}
+				}
+				$('.be-school p').empty();
+			 	$('.be-tel p').empty();		 	
+			 	$('.carDetal-list').empty();
+				$('.iscoll').empty();
+				$('.select').empty();
+				classNew($("#saveCar_id").val(), 2, $('#date_mou').val(),doo);
+			}else if(data.code=="already"){
+				alert(data.content);
+			}else if(data.code=="fail"){
+				alert(data.content);
+			}else if(data.code=="exceed_time"){
+				alert(data.content);
+			}else if(data.code=="zero"){
+				alert(data.content);
+			}else if(data.code=="error"){
+				alert(data.content);
+			}
+		}
+	})	
+}
+})
